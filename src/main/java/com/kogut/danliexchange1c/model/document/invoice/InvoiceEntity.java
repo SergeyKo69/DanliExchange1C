@@ -1,16 +1,14 @@
-package com.kogut.danliexchange1c.model.document;
+package com.kogut.danliexchange1c.model.document.invoice;
 
 import com.kogut.danliexchange1c.model.document.common.AbstractCommonDocEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -90,5 +88,9 @@ public class InvoiceEntity extends AbstractCommonDocEntity {
 
     @Column(name = "orderCancel")
     private Boolean orderCancel;
+
+    @ElementCollection
+    @CollectionTable(name = "invoiceProductsTab", joinColumns = @JoinColumn(name = "invoiceId"))
+    private List<InvoiceProductsTabEntity> products;
 
 }
