@@ -93,4 +93,8 @@ public class InvoiceEntity extends AbstractCommonDocEntity {
     @CollectionTable(name = "invoiceProductsTab", joinColumns = @JoinColumn(name = "invoiceId"))
     private List<InvoiceProductsTabEntity> products;
 
+    @ElementCollection
+    @CollectionTable(name = "invoiceServicesTab", joinColumns = @JoinColumn(name = "invoiceId"))
+    private List<InvoiceServicesTabEntity> services;
+
 }
