@@ -1,23 +1,16 @@
 package com.kogut.danliexchange1c.model.document.invoice;
 
+import com.kogut.danliexchange1c.model.document.common.AbstractCommonDocTabEntity;
 import lombok.Getter;
 import lombok.Setter;
-import org.intellij.lang.annotations.Identifier;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.UUID;
 
 @Getter
 @Setter
 @Embeddable
-public class InvoiceProductsTabEntity {
-
-    @Column(name = "productId")
-    private String productId = "";
-
-    @Column(name = "quantity")
-    private BigDecimal quantity = BigDecimal.ZERO;
+public class InvoiceProductsTabEntity extends AbstractCommonDocTabEntity {
 
     @Column(name = "quantitySeats")
     private BigDecimal quantitySeats = BigDecimal.ZERO;
@@ -30,18 +23,6 @@ public class InvoiceProductsTabEntity {
 
     @Column(name = "storeId")
     private String storeId = "";
-
-    @Column(name = "price")
-    private BigDecimal price = BigDecimal.ZERO;
-
-    @Column(name = "amount")
-    private BigDecimal amount = BigDecimal.ZERO;
-
-    @Column(name = "amountVAT")
-    private BigDecimal amountVAT = BigDecimal.ZERO;
-
-    @Column(name = "vATRate")
-    private String vATRate = "";
 
     @Column(name = "gtdId")
     private String gtdId = "";
