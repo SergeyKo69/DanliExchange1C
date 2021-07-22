@@ -21,8 +21,17 @@ public abstract class AbstractCommonDocEntity {
     @Column(name = "externalId")
     private String externalId = "";
 
+    @Column(name = "number")
+    private String numberDoc = "";
+
     @Column(name = "dateDoc")
     private LocalDateTime dateDoc;
+
+    @Column(name = "record")
+    private Boolean record;
+
+    @Column(name = "deleted")
+    private Boolean deleted;
 
     @Column(name = "comment", columnDefinition="longtext")
     private String comment = "";
