@@ -89,7 +89,7 @@ public class InvoiceEntity extends AbstractCommonDocEntity {
     @Column(name = "orderCancel")
     private Boolean orderCancel;
 
-    @Column(name = "numberOrder")
+    @Column(name = "numberOrder", length = 20)
     private String numberOrder;
 
     @Column(name = "dateOrder")

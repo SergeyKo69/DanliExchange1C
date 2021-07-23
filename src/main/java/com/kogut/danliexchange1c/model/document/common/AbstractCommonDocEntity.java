@@ -22,7 +22,7 @@ public abstract class AbstractCommonDocEntity {
     @CreationTimestamp
     private LocalDateTime dateTime;
 
-    @Column(name = "externalId")
+    @Column(name = "externalId", length = 36)
     private String externalId = "";
 
     @Column(name = "number", length = 11)
