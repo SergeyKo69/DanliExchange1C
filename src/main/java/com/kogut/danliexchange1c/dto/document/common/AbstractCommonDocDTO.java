@@ -22,5 +22,6 @@ public abstract class AbstractCommonDocDTO extends AbstractDTO {
     private Boolean record;
     private Boolean deleted;
     private String comment = "";
+    private String clientDB;
 
 }

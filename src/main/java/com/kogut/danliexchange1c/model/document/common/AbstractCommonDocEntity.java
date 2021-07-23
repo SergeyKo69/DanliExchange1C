@@ -1,5 +1,6 @@
 package com.kogut.danliexchange1c.model.document.common;
 
+import com.kogut.danliexchange1c.enumerations.general.ClientDB;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.intellij.lang.annotations.Identifier;
@@ -39,5 +40,8 @@ public abstract class AbstractCommonDocEntity {
 
     @Column(name = "comment", columnDefinition="longtext")
     private String comment = "";
+
+    @Enumerated(EnumType.STRING)
+    private ClientDB clientDB;
 
 }
