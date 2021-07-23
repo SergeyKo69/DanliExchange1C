@@ -10,6 +10,7 @@ public interface InvoiceRepository extends JpaRepository<InvoiceEntity, String> 
 
     List<InvoiceEntity> findAllByExternalId(String externalId);
     List<InvoiceEntity> findAllByClientDBOrderByDateTime(ClientDBEnum clientDB);
+    List<InvoiceEntity> findAllByClientDBOrderByDateTimeDesc(ClientDBEnum clientDB);
 
     void deleteByExternalId(String externalId);
 
