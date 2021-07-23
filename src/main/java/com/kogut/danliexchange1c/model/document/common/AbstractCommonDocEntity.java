@@ -1,6 +1,7 @@
 package com.kogut.danliexchange1c.model.document.common;
 
 import com.kogut.danliexchange1c.enumerations.general.ClientDB;
+import com.kogut.danliexchange1c.model.common.AbstractEntity;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.intellij.lang.annotations.Identifier;
@@ -13,7 +14,7 @@ import java.util.UUID;
 @Setter
 @MappedSuperclass
 @NoArgsConstructor
-public abstract class AbstractCommonDocEntity {
+public abstract class AbstractCommonDocEntity extends AbstractEntity {
 
     @Id
     @Identifier

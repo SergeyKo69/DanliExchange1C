@@ -4,6 +4,8 @@ import com.kogut.danliexchange1c.dto.common.AbstractDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
@@ -22,6 +24,9 @@ public abstract class AbstractCommonDocDTO extends AbstractDTO {
     private Boolean record;
     private Boolean deleted;
     private String comment = "";
+
+    @NotNull
+    @NotEmpty
     private String clientDB;
 
 }
