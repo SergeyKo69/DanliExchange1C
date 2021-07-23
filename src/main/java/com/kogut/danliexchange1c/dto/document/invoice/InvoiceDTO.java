@@ -46,5 +46,6 @@ public class InvoiceDTO extends AbstractCommonDocDTO {
     private LocalDate dateOrder;
 
     private List<InvoiceProductsTabDTO> products;
+    private List<InvoiceServicesTabDTO> services;
 
 }
