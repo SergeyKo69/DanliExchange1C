@@ -1,5 +1,6 @@
 package com.kogut.danliexchange1c.dto.document.common;
 
+import com.kogut.danliexchange1c.dto.common.AbstractDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -11,9 +12,9 @@ import java.time.LocalDateTime;
  */
 
 @Data
-@EqualsAndHashCode
 @NoArgsConstructor
-public abstract class AbstractCommonDocDTO {
+@EqualsAndHashCode(callSuper = false)
+public abstract class AbstractCommonDocDTO extends AbstractDTO {
 
     private String externalId = "";
     private String numberDoc = "";

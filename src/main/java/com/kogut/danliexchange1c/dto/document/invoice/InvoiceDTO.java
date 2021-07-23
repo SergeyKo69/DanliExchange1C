@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @author S.Kogut on 23.07.2021
@@ -43,5 +44,7 @@ public class InvoiceDTO extends AbstractCommonDocDTO {
     private Boolean orderCancel;
     private String numberOrder;
     private LocalDate dateOrder;
+
+    private List<InvoiceProductsTabDTO> products;
 
 }
