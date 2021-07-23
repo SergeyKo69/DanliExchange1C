@@ -89,6 +89,12 @@ public class InvoiceEntity extends AbstractCommonDocEntity {
     @Column(name = "orderCancel")
     private Boolean orderCancel;
 
+    @Column(name = "numberOrder")
+    private String numberOrder;
+
+    @Column(name = "dateOrder")
+    private LocalDate dateOrder;
+
     @ElementCollection
     @CollectionTable(name = "invoiceProductsTab", joinColumns = @JoinColumn(name = "invoiceId"))
     private List<InvoiceProductsTabEntity> products;
