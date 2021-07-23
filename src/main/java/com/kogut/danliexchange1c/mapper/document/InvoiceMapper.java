@@ -3,7 +3,7 @@ package com.kogut.danliexchange1c.mapper.document;
 import com.kogut.danliexchange1c.dto.document.invoice.InvoiceDTO;
 import com.kogut.danliexchange1c.dto.document.invoice.InvoiceProductsTabDTO;
 import com.kogut.danliexchange1c.dto.document.invoice.InvoiceServicesTabDTO;
-import com.kogut.danliexchange1c.enumerations.general.ClientDB;
+import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.mapper.abstracted.AbstractMapper;
 import com.kogut.danliexchange1c.model.document.invoice.InvoiceEntity;
 import com.kogut.danliexchange1c.model.document.invoice.InvoiceProductsTabEntity;
@@ -53,7 +53,7 @@ public class InvoiceMapper extends AbstractMapper<InvoiceEntity, InvoiceDTO> {
     @Override
     public void mapSpecificFields(InvoiceDTO source, InvoiceEntity destination) {
         super.mapSpecificFields(source, destination);
-        destination.setClientDB(ClientDB.valueOf(source.getClientDB()));
+        destination.setClientDB(ClientDBEnum.valueOf(source.getClientDB()));
         Set<InvoiceProductsTabEntity> products = new HashSet<>();
         Set<InvoiceServicesTabEntity> services = new HashSet<>();
         source.getProducts().parallelStream().forEach(product -> products.add(mapper.map(product, InvoiceProductsTabEntity.class)));

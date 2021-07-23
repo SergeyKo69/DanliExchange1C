@@ -1,6 +1,6 @@
 package com.kogut.danliexchange1c.model.document.common;
 
-import com.kogut.danliexchange1c.enumerations.general.ClientDB;
+import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.model.common.AbstractEntity;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -43,6 +43,6 @@ public abstract class AbstractCommonDocEntity extends AbstractEntity {
     private String comment = "";
 
     @Enumerated(EnumType.STRING)
-    private ClientDB clientDB;
+    private ClientDBEnum clientDB;
 
 }
