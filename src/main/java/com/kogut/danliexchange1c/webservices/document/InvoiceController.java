@@ -34,7 +34,7 @@ public class InvoiceController {
         return new ResponseEntity<>(new HealthCheck().health(), HttpStatus.OK);
     }
 
-    @PostMapping("/invoice")
+    @PostMapping(value = "/invoice", consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<HttpStatus> invoice(@RequestBody InvoiceDTO invoice) {
         try {
             exchangeService.exchange(invoice);
