@@ -37,8 +37,8 @@ public class ProjectService implements IProjectService {
 
     @Override
     @Transactional
-    public ProjectDTO saveDTO(ProjectDTO project) {
-        return projectMapper.toDto(projectRepository.save(projectMapper.toEntity(project)));
+    public void saveDTO(ProjectDTO project) {
+        projectMapper.toDto(projectRepository.save(projectMapper.toEntity(project)));
     }
 
     @Override

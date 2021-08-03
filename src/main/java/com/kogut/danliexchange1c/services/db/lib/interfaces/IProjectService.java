@@ -2,7 +2,6 @@ package com.kogut.danliexchange1c.services.db.lib.interfaces;
 
 import com.kogut.danliexchange1c.dto.lib.project.ProjectDTO;
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
-import com.kogut.danliexchange1c.model.document.invoice.InvoiceEntity;
 import com.kogut.danliexchange1c.model.lib.project.ProjectEntity;
 
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
 public interface IProjectService {
 
     ProjectEntity save(ProjectEntity project);
-    ProjectDTO saveDTO(ProjectDTO project);
+    void saveDTO(ProjectDTO project);
     List<ProjectEntity> saveAll(List<ProjectEntity> projects);
 
     List<ProjectEntity> findAll();
