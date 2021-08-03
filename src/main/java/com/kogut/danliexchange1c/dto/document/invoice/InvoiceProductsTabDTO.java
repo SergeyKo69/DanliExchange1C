@@ -21,13 +21,13 @@ public class InvoiceProductsTabDTO extends AbstractDTO {
     private BigDecimal price = BigDecimal.ZERO;
     private BigDecimal amount = BigDecimal.ZERO;
     private BigDecimal amountVAT = BigDecimal.ZERO;
-    private String vATRate = "";
+    private String vatRate = "";
     private BigDecimal quantitySeats = BigDecimal.ZERO;
     private String unitId = "";
     private String unitIdSeats = "";
     private String storeId = "";
     private String gtdId = "";
-    private String tNVEDId = "";
+    private String tnvedId = "";
     private String content = "";
 
 }

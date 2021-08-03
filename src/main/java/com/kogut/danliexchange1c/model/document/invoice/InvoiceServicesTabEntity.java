@@ -31,7 +31,7 @@ public class InvoiceServicesTabEntity {
     @Column(name = "amountVAT")
     private BigDecimal amountVAT = BigDecimal.ZERO;
 
-    @Column(name = "vATRate")
+    @Column(name = "vatRate")
     private String vATRate = "";
 
 }

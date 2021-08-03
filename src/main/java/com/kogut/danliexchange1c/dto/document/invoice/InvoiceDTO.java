@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,7 +46,7 @@ public class InvoiceDTO extends AbstractCommonDocDTO {
     private String numberOrder;
     private LocalDate dateOrder;
 
-    private List<InvoiceProductsTabDTO> products;
-    private List<InvoiceServicesTabDTO> services;
+    private List<InvoiceProductsTabDTO> products = new ArrayList<>();
+    private List<InvoiceServicesTabDTO> services = new ArrayList<>();
 
 }

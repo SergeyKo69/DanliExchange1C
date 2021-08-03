@@ -21,6 +21,6 @@ public class InvoiceServicesTabDTO extends AbstractDTO {
     private BigDecimal price = BigDecimal.ZERO;
     private BigDecimal amount = BigDecimal.ZERO;
     private BigDecimal amountVAT = BigDecimal.ZERO;
-    private String vATRate = "";
+    private String vatRate = "";
 
 }

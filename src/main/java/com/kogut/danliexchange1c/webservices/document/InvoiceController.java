@@ -11,6 +11,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 /**
@@ -36,11 +40,11 @@ public class InvoiceController {
 
     @PostMapping(value = "/invoice", consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<HttpStatus> invoice(@RequestBody InvoiceDTO invoice) {
-        try {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        executor.submit(() -> {
             exchangeService.exchange(invoice);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+        });
+
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
