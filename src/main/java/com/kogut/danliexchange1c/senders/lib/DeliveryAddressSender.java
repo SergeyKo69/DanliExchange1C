@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,6 +17,8 @@ import java.util.HashMap;
 /**
  * @author S.Kogut on 03.08.2021
  */
+
+@Component
 public class DeliveryAddressSender implements ISender<DeliveryAddressDTO> {
 
     private final RestTemplate restTemplate;
