@@ -1,14 +1,14 @@
 package com.kogut.danliexchange1c.model.lib.common;
 
+import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
+import com.kogut.danliexchange1c.model.common.AbstractEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.intellij.lang.annotations.Identifier;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -20,7 +20,7 @@ import java.util.UUID;
 @Setter
 @MappedSuperclass
 @NoArgsConstructor
-public class AbstractCommonLibEntity {
+public abstract class AbstractCommonLibEntity extends AbstractEntity {
 
     @Id
     @Identifier
@@ -47,5 +47,8 @@ public class AbstractCommonLibEntity {
 
     @Column(name = "deleted")
     private Boolean deleted;
+
+    @Enumerated(EnumType.STRING)
+    private ClientDBEnum clientDB;
 
 }

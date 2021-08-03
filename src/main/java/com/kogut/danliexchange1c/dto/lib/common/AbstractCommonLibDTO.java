@@ -4,6 +4,9 @@ import com.kogut.danliexchange1c.dto.common.AbstractDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 /**
  * @author S.Kogut on 03.08.2021
  */
@@ -17,5 +20,9 @@ public abstract class AbstractCommonLibDTO extends AbstractDTO {
     private String parentId = "";
     private String ownerId = "";
     private Boolean deleted;
+
+    @NotNull
+    @NotEmpty
+    private String clientDB;
 
 }
