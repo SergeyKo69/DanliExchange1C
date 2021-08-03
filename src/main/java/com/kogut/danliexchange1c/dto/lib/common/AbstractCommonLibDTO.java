@@ -11,10 +11,11 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public abstract class AbstractCommonLibDTO extends AbstractDTO {
 
-    private String code;
-    private String name;
-    private String parentId;
-    private String ownerId;
+    private String externalId = "";
+    private String code = "";
+    private String name = "";
+    private String parentId = "";
+    private String ownerId = "";
     private Boolean deleted;
 
 }
