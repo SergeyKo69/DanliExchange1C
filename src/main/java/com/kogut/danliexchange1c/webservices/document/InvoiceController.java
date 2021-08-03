@@ -2,7 +2,6 @@ package com.kogut.danliexchange1c.webservices.document;
 
 import com.kogut.danliexchange1c.dto.document.invoice.InvoiceDTO;
 import com.kogut.danliexchange1c.dto.services.HealthCheck;
-import com.kogut.danliexchange1c.services.exchange.document.ExchangeInvoice;
 import com.kogut.danliexchange1c.services.exchange.interfaces.IExchange;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -41,9 +39,7 @@ public class InvoiceController {
     @PostMapping(value = "/invoice", consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<HttpStatus> invoice(@RequestBody InvoiceDTO invoice) {
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        executor.submit(() -> {
-            exchangeService.exchange(invoice);
-        });
+        executor.submit(() -> exchangeService.exchange(invoice));
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
