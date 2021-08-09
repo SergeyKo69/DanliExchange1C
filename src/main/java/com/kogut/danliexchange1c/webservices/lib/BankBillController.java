@@ -1,6 +1,6 @@
 package com.kogut.danliexchange1c.webservices.lib;
 
-import com.kogut.danliexchange1c.dto.lib.project.ProjectDTO;
+import com.kogut.danliexchange1c.dto.lib.bankbill.BankBillDTO;
 import com.kogut.danliexchange1c.services.exchange.interfaces.IExchange;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,25 +17,25 @@ import java.util.concurrent.Executors;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 /**
- * @author S.Kogut on 03.08.2021
+ * @author S.Kogut on 09.08.2021
  */
 
 @RestController
 @NoArgsConstructor
 @RequestMapping("/api/v1")
-public class ProjectController {
+public class BankBillController {
 
-    private IExchange<ProjectDTO> exchangeService;
+    private IExchange<BankBillDTO> exchangeService;
 
     @Autowired
-    public ProjectController(IExchange<ProjectDTO> exchangeService) {
+    public BankBillController(IExchange<BankBillDTO> exchangeService) {
         this.exchangeService = exchangeService;
     }
 
-    @PostMapping(value = "/project", consumes = APPLICATION_JSON_VALUE)
-    public ResponseEntity<HttpStatus> project(@RequestBody ProjectDTO project) {
+    @PostMapping(value = "/bankBill", consumes = APPLICATION_JSON_VALUE)
+    public ResponseEntity<HttpStatus> bankBill(@RequestBody BankBillDTO bankBillDTO) {
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        executor.submit(() -> exchangeService.exchange(project));
+        executor.submit(() -> exchangeService.exchange(bankBillDTO));
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
