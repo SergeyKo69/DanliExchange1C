@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.Table;
 
 /**
  * @author S.Kogut on 09.08.2021
@@ -13,6 +14,7 @@ import javax.persistence.Embeddable;
 @Getter
 @Setter
 @Embeddable
+@Table(name = "client_contacts")
 public class ClientContactsEntity {
 
     @Column(name = "type")

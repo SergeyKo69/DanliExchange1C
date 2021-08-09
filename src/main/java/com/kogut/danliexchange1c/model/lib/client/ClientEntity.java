@@ -22,7 +22,7 @@ public class ClientEntity extends AbstractCommonLibEntity {
     @Column(name = "inn", length = 12)
     private String INN = "";
 
-    @Column(name = "codPoOkpo", length = 12)
+    @Column(name = "cod_po_okpo", length = 12)
     private String codPoOkpo = "";
 
     @Column(name = "comment")
@@ -31,20 +31,20 @@ public class ClientEntity extends AbstractCommonLibEntity {
     @Column(name = "kpp", length = 9)
     private String kpp = "";
 
-    @Column(name = "fullName")
+    @Column(name = "full_name")
     private String fullName = "";
 
-    @Column(name = "urPhisFace")
+    @Column(name = "ur_phis_face")
     private String urPhisFace = "";
 
-    @Column(name = "countryId")
+    @Column(name = "country_Id")
     private String countryId = "";
 
-    @Column(name = "bankBillId")
+    @Column(name = "bank_bill_id")
     private String bankBillId = "";
 
     @ElementCollection
-    @CollectionTable(name = "clientContacts", joinColumns = @JoinColumn(name = "clientId"))
+    @CollectionTable(name = "client_contacts", joinColumns = @JoinColumn(name = "client_id"))
     private List<ClientContactsEntity> contacts;
 
 }
