@@ -1,6 +1,6 @@
 package com.kogut.danliexchange1c.mapper.lib;
 
-import com.kogut.danliexchange1c.dto.lib.project.DeliveryAddressDTO;
+import com.kogut.danliexchange1c.dto.lib.deliveryaddress.DeliveryAddressDTO;
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.mapper.abstracted.AbstractMapper;
 import com.kogut.danliexchange1c.model.lib.deliveryaddress.DeliveryAddressEntity;

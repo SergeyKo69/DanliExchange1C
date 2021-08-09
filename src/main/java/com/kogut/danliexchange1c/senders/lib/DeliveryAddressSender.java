@@ -1,6 +1,6 @@
 package com.kogut.danliexchange1c.senders.lib;
 
-import com.kogut.danliexchange1c.dto.lib.project.DeliveryAddressDTO;
+import com.kogut.danliexchange1c.dto.lib.deliveryaddress.DeliveryAddressDTO;
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.senders.interfaces.ISender;
 import com.kogut.danliexchange1c.util.interfaces.ISettingsUtil;

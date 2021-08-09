@@ -1,4 +1,4 @@
-package com.kogut.danliexchange1c.dto.lib.project;
+package com.kogut.danliexchange1c.dto.lib.deliveryaddress;
 
 import com.kogut.danliexchange1c.dto.lib.common.AbstractCommonLibDTO;
 import lombok.Data;
