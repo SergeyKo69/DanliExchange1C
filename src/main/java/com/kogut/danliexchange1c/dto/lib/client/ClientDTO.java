@@ -4,6 +4,7 @@ import com.kogut.danliexchange1c.dto.lib.common.AbstractCommonLibDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,5 +24,5 @@ public class ClientDTO extends AbstractCommonLibDTO {
     private String countryId = "";
     private String bankBillId = "";
 
-    private List<ClientContactsDTO> contacts;
+    private List<ClientContactsDTO> contacts = new ArrayList<>();
 }

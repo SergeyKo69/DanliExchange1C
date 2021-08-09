@@ -1,6 +1,7 @@
 package com.kogut.danliexchange1c.dto.lib.client;
 
 import com.kogut.danliexchange1c.dto.common.AbstractDTO;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class ClientContactsDTO extends AbstractDTO {
 
