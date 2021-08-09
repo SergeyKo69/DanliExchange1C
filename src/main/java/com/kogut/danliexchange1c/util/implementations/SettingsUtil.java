@@ -33,6 +33,9 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka1.client}")
     private String pathKa1Client;
 
+    @Value("${path.ka1.groupLib}")
+    private String pathKa1GroupLib;
+
     @Value("${username.ka1}")
     private String userNameKa1;
 
@@ -60,6 +63,9 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka2.client}")
     private String pathKa2Client;
 
+    @Value("${path.ka2.groupLib}")
+    private String pathKa2GroupLib;
+
 
     @Override
     public HashMap<String, String> getSettings(ClientDBEnum clientDB) {
@@ -70,6 +76,7 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathProject", pathKa2Project);
             settings.put("pathDeliveryAddress", pathKa2DeliveryAddress);
             settings.put("pathClient", pathKa2Client);
+            settings.put("pathGroupLib", pathKa2GroupLib);
             settings.put("userName", userNameKa2);
             settings.put("password", passwordKa2);
         } else {
@@ -78,6 +85,7 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathProject", pathKa1Project);
             settings.put("pathDeliveryAddress", pathKa1DeliveryAddress);
             settings.put("pathClient", pathKa1Client);
+            settings.put("pathGroupLib", pathKa1GroupLib);
             settings.put("userName", userNameKa1);
             settings.put("password", passwordKa1);
         }
