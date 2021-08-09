@@ -3,6 +3,7 @@ package com.kogut.danliexchange1c.dto.lib.common;
 import com.kogut.danliexchange1c.dto.common.AbstractDTO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
