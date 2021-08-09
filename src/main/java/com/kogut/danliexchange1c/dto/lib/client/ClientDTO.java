@@ -15,12 +15,13 @@ import java.util.List;
 public class ClientDTO extends AbstractCommonLibDTO {
 
     private String INN = "";
-    private String codPoOKPO = "";
+    private String codPoOkpo = "";
     private String comment = "";
     private String kpp = "";
     private String fullName = "";
     private String urPhisFace = "";
     private String countryId = "";
+    private String bankBillId = "";
 
     private List<ClientContactsDTO> contacts;
 }
