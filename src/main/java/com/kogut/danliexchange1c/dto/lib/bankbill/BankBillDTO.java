@@ -1,4 +1,4 @@
-package com.kogut.danliexchange1c.dto.lib.client;
+package com.kogut.danliexchange1c.dto.lib.bankbill;
 
 import com.kogut.danliexchange1c.dto.lib.common.AbstractCommonLibDTO;
 import lombok.Data;
