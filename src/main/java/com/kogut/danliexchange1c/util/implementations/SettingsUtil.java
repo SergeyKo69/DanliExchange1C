@@ -36,6 +36,9 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka1.groupLib}")
     private String pathKa1GroupLib;
 
+    @Value("${path.ka1.bankBill}")
+    private String pathKa1BankBill;
+
     @Value("${username.ka1}")
     private String userNameKa1;
 
@@ -65,6 +68,9 @@ public class SettingsUtil implements ISettingsUtil {
 
     @Value("${path.ka2.groupLib}")
     private String pathKa2GroupLib;
+
+    @Value("${path.ka2.bankBill}")
+    private String pathKa2BankBill;
 
 
     @Override
