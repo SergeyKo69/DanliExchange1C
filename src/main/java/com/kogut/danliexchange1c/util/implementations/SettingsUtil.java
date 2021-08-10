@@ -57,6 +57,12 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka1.product}")
     private String pathKa1Product;
 
+    @Value("${path.ka1.gtd}")
+    private String pathKa1Gtd;
+
+    @Value("${path.ka1.tnvd}")
+    private String pathKa1Tnvd;
+
     @Value("${username.ka1}")
     private String userNameKa1;
 
@@ -108,6 +114,12 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka2.product}")
     private String pathKa2Product;
 
+    @Value("${path.ka2.gtd}")
+    private String pathKa2Gtd;
+
+    @Value("${path.ka2.tnvd}")
+    private String pathKa2Tnvd;
+
 
     @Override
     public HashMap<String, String> getSettings(ClientDBEnum clientDB) {
@@ -126,6 +138,8 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathInvoiceIssued", pathKa2InvoiceIssued);
             settings.put("pathPurchaseInvoice", pathKa2PurchaseInvoice);
             settings.put("pathProduct", pathKa2Product);
+            settings.put("pathgtd", pathKa2Gtd);
+            settings.put("pathTnvd", pathKa2Tnvd);
             settings.put("userName", userNameKa2);
             settings.put("password", passwordKa2);
         } else {
@@ -142,6 +156,8 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathInvoiceIssued", pathKa1InvoiceIssued);
             settings.put("pathPurchaseInvoice", pathKa1PurchaseInvoice);
             settings.put("pathProduct", pathKa1Product);
+            settings.put("pathgtd", pathKa1Gtd);
+            settings.put("pathTnvd", pathKa1Tnvd);
             settings.put("userName", userNameKa1);
             settings.put("password", passwordKa1);
         }
