@@ -1,12 +1,10 @@
 package com.kogut.danliexchange1c.mapper.lib;
 
 import com.kogut.danliexchange1c.dto.lib.agreement.AgreementDTO;
-import com.kogut.danliexchange1c.dto.lib.project.ProjectDTO;
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.enumerations.lib.TypeAgreementEnum;
 import com.kogut.danliexchange1c.mapper.abstracted.AbstractMapper;
 import com.kogut.danliexchange1c.model.lib.agreement.AgreementEntity;
-import com.kogut.danliexchange1c.model.lib.project.ProjectEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
