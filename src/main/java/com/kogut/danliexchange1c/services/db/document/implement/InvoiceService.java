@@ -49,12 +49,6 @@ public class InvoiceService implements IInvoiceService {
     }
 
     @Override
-    @Transactional
-    public InvoiceEntity update(@NotNull InvoiceEntity invoice) {
-        return invoiceRepository.save(invoice);
-    }
-
-    @Override
     public List<InvoiceEntity> findAll() {
         return invoiceRepository.findAll();
     }
