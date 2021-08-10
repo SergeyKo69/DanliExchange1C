@@ -2,7 +2,6 @@ package com.kogut.danliexchange1c.repositories.lib;
 
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.model.lib.price.PriceEntity;
-import com.kogut.danliexchange1c.model.lib.project.ProjectEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,9 +14,9 @@ import java.util.List;
 @Repository
 public interface PriceRepository extends JpaRepository<PriceEntity, String> {
 
-    List<ProjectEntity> findAllByExternalId(String externalId);
-    List<ProjectEntity> findAllByClientDBOrderByDateTime(ClientDBEnum clientDB);
-    List<ProjectEntity> findAllByClientDBOrderByDateTimeDesc(ClientDBEnum clientDB);
+    List<PriceEntity> findAllByExternalId(String externalId);
+    List<PriceEntity> findAllByClientDBOrderByDateTime(ClientDBEnum clientDB);
+    List<PriceEntity> findAllByClientDBOrderByDateTimeDesc(ClientDBEnum clientDB);
 
     void deleteByExternalId(String externalId);
 
