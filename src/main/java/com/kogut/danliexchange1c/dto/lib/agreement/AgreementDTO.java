@@ -15,7 +15,7 @@ import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 public class AgreementDTO extends AbstractCommonLibDTO {
 
     @NotNull
