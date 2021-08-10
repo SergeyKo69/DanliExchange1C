@@ -20,7 +20,7 @@ import java.util.List;
 public class InvoiceIssuedDTO extends AbstractCommonDocDTO {
 
     private Boolean correction;
-    private String kodeViewOperation = "";
+    private String codeViewOperation = "";
     private String kppClient = "";
     private LocalDate dateOfIssue;
     private String clientId;
