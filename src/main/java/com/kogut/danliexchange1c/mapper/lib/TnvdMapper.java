@@ -1,10 +1,8 @@
 package com.kogut.danliexchange1c.mapper.lib;
 
-import com.kogut.danliexchange1c.dto.lib.store.StoreDTO;
 import com.kogut.danliexchange1c.dto.lib.tnvd.TnvdDTO;
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.mapper.abstracted.AbstractMapper;
-import com.kogut.danliexchange1c.model.lib.store.StoreEntity;
 import com.kogut.danliexchange1c.model.lib.tnvd.TnvdEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
