@@ -6,5 +6,6 @@ package com.kogut.danliexchange1c.enumerations.lib;
 public enum TypeOwnerGroupLibEnum {
     CLIENT,
     PRODUCT,
+    PROJECT,
     ORGANISATION
 }
