@@ -1,7 +1,6 @@
 package com.kogut.danliexchange1c.repositories.lib;
 
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
-import com.kogut.danliexchange1c.model.lib.store.StoreEntity;
 import com.kogut.danliexchange1c.model.lib.tnvd.TnvdEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
