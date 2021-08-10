@@ -1,6 +1,5 @@
 package com.kogut.danliexchange1c.senders.lib;
 
-import com.kogut.danliexchange1c.dto.lib.project.ProjectDTO;
 import com.kogut.danliexchange1c.dto.lib.store.StoreDTO;
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.senders.interfaces.ISender;
