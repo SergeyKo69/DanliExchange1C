@@ -1,4 +1,4 @@
-package com.kogut.danliexchange1c.services.exchange.lib;
+package com.kogut.danliexchange1c.services.exchange.document;
 
 import com.kogut.danliexchange1c.dto.document.invoiceissued.InvoiceIssuedDTO;
 import com.kogut.danliexchange1c.senders.interfaces.ISender;
