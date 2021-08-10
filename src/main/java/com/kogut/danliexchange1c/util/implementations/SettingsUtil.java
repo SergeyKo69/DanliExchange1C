@@ -39,6 +39,15 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka1.bankBill}")
     private String pathKa1BankBill;
 
+    @Value("${path.ka1.agreement}")
+    private String pathKa1Agreement;
+
+    @Value("${path.ka1.price}")
+    private String pathKa1Price;
+
+    @Value("${path.ka1.store}")
+    private String pathKa1Store;
+
     @Value("${username.ka1}")
     private String userNameKa1;
 
@@ -72,6 +81,15 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka2.bankBill}")
     private String pathKa2BankBill;
 
+    @Value("${path.ka2.agreement}")
+    private String pathKa2Agreement;
+
+    @Value("${path.ka2.price}")
+    private String pathKa2Price;
+
+    @Value("${path.ka2.store}")
+    private String pathKa2Store;
+
 
     @Override
     public HashMap<String, String> getSettings(ClientDBEnum clientDB) {
@@ -83,6 +101,10 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathDeliveryAddress", pathKa2DeliveryAddress);
             settings.put("pathClient", pathKa2Client);
             settings.put("pathGroupLib", pathKa2GroupLib);
+            settings.put("pathBankBill", pathKa2BankBill);
+            settings.put("pathAgreement", pathKa2Agreement);
+            settings.put("pathPrice", pathKa2Price);
+            settings.put("pathStore", pathKa2Store);
             settings.put("userName", userNameKa2);
             settings.put("password", passwordKa2);
         } else {
@@ -92,6 +114,10 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathDeliveryAddress", pathKa1DeliveryAddress);
             settings.put("pathClient", pathKa1Client);
             settings.put("pathGroupLib", pathKa1GroupLib);
+            settings.put("pathBankBill", pathKa1BankBill);
+            settings.put("pathAgreement", pathKa1Agreement);
+            settings.put("pathPrice", pathKa1Price);
+            settings.put("pathStore", pathKa1Store);
             settings.put("userName", userNameKa1);
             settings.put("password", passwordKa1);
         }
