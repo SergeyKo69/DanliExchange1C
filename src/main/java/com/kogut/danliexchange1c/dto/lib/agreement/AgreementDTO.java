@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 /**
  * @author S.Kogut on 10.08.2021
@@ -21,5 +22,7 @@ public class AgreementDTO extends AbstractCommonLibDTO {
     @NotEmpty
     private String type;
     private String currencyId = "";
+    private String number = "";
+    private LocalDate date;
 
 }
