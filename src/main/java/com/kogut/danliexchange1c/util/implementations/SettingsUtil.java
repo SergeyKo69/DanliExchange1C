@@ -57,6 +57,9 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka1.invoiceReceived}")
     private String pathKa1InvoiceReceived;
 
+    @Value("${path.ka1.receiptCashOrder}")
+    private String pathKa1ReceiptCashOrder;
+
     @Value("${path.ka1.product}")
     private String pathKa1Product;
 
@@ -126,6 +129,8 @@ public class SettingsUtil implements ISettingsUtil {
     @Value("${path.ka2.invoiceReceived}")
     private String pathKa2InvoiceReceived;
 
+    @Value("${path.ka2.receiptCashOrder}")
+    private String pathKa2ReceiptCashOrder;
 
     @Override
     public HashMap<String, String> getSettings(ClientDBEnum clientDB) {
@@ -144,6 +149,7 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathInvoiceIssued", pathKa2InvoiceIssued);
             settings.put("pathPurchaseInvoice", pathKa2PurchaseInvoice);
             settings.put("pathInvoiceReceived", pathKa2InvoiceReceived);
+            settings.put("pathReceiptCashOrder", pathKa2ReceiptCashOrder);
             settings.put("pathProduct", pathKa2Product);
             settings.put("pathgtd", pathKa2Gtd);
             settings.put("pathTnvd", pathKa2Tnvd);
@@ -163,6 +169,7 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathInvoiceIssued", pathKa1InvoiceIssued);
             settings.put("pathInvoiceReceived", pathKa1InvoiceReceived);
             settings.put("pathPurchaseInvoice", pathKa1PurchaseInvoice);
+            settings.put("pathReceiptCashOrder", pathKa1ReceiptCashOrder);
             settings.put("pathProduct", pathKa1Product);
             settings.put("pathgtd", pathKa1Gtd);
             settings.put("pathTnvd", pathKa1Tnvd);
