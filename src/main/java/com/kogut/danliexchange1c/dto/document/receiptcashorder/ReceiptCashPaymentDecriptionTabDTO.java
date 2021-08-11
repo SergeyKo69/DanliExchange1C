@@ -23,7 +23,7 @@ public class ReceiptCashPaymentDecriptionTabDTO extends AbstractDTO {
     private Integer rateVat = 20;
     private BigDecimal amountVat = BigDecimal.ZERO;
     private String articleId = "";
-    private String projectId = "";
+    private String projectDecriptionId = "";
     private String docRView = "";
     private String docRId = "";
     private ReceiptCashBaseDocDTO docR = new ReceiptCashBaseDocDTO();

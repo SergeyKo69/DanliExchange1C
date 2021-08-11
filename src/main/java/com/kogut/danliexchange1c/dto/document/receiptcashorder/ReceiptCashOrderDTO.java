@@ -6,6 +6,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author S.Kogut on 11.08.2021
@@ -31,5 +33,6 @@ public class ReceiptCashOrderDTO extends AbstractCommonDocDTO {
     private Integer rateVat = 20;
     private ReceiptCashBaseDocDTO baseDoc = new ReceiptCashBaseDocDTO();
 
+    private List<ReceiptCashPaymentDecriptionTabDTO> cashDecription = new ArrayList<>();
 
 }

@@ -17,14 +17,14 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = false)
 public class ReceiptCashBaseDocDTO extends AbstractDTO {
 
-    private String id = "";
-    private String number = "";
-    private LocalDateTime date;
-    private Boolean deleted;
+    private String idBaseDoc = "";
+    private String numberBaseDoc = "";
+    private LocalDateTime dateBaseDoc;
+    private Boolean deletedBaseDoc;
     private BigDecimal amountVatDoc = BigDecimal.ZERO;
-    private String projectId = "";
-    private String clientId = "";
-    private String agreementId = "";
-    private String comment = "";
+    private String projectIdBaseDoc = "";
+    private String clientIdBaseDoc = "";
+    private String agreementBaseDocId = "";
+    private String commentBaseDoc = "";
 
 }
