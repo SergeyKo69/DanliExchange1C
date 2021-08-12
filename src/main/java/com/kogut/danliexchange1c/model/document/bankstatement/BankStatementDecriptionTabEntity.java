@@ -1,4 +1,4 @@
-package com.kogut.danliexchange1c.model.document.receiptcashorder;
+package com.kogut.danliexchange1c.model.document.bankstatement;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,22 +9,28 @@ import javax.persistence.Embedded;
 import java.math.BigDecimal;
 
 /**
- * @author S.Kogut on 11.08.2021
+ * @author S.Kogut on 12.08.2021
  */
 
 @Getter
 @Setter
 @Embeddable
-public class ReceiptCashPaymentDecriptionTabEntity {
+public class BankStatementDecriptionTabEntity {
 
     @Column(name = "agreement_id", length = 36)
     private String agreementId = "";
 
-    @Column(name = "amount")
-    private BigDecimal amount = BigDecimal.ZERO;
+    @Column(name = "article_id", length = 36)
+    private String articleId = "";
 
     @Column(name = "multiplicity")
     private BigDecimal multiplicity = BigDecimal.ZERO;
+
+    @Column(name = "amount")
+    private BigDecimal amount = BigDecimal.ZERO;
+
+    @Column(name = "multiplicity_k")
+    private BigDecimal multiplicityK = BigDecimal.ZERO;
 
     @Column(name = "amount_vr")
     private BigDecimal amountVR = BigDecimal.ZERO;
@@ -35,19 +41,17 @@ public class ReceiptCashPaymentDecriptionTabEntity {
     @Column(name = "amount_vat")
     private BigDecimal amountVat = BigDecimal.ZERO;
 
-    @Column(name = "article_id", length = 36)
-    private String articleId = "";
-
-    @Column(name = "project_decription_id", length = 36)
+    @Column(name = "project_decription_id")
     private String projectDecriptionId = "";
 
     @Column(name = "doc_r_view")
     private String docRView = "";
 
-    @Column(name = "doc_r_id", length = 36)
+    @Column(name = "doc_r_id")
     private String docRId = "";
 
     @Embedded
-    private ReceiptCashBaseDocEntity docR;
+    @Column(name = "doc_r")
+    private BankStatementBaseDocEntity docR;
 
 }

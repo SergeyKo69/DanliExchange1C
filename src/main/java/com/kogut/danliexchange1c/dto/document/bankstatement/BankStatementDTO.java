@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author S.Kogut on 12.08.2021
@@ -36,5 +38,6 @@ public class BankStatementDTO extends AbstractCommonDocDTO {
     private String currencyId = "";
     private BankStatementBaseDocDTO baseDoc;
 
+    private List<BankStatementDecriptionTabDTO> cashDecription = new ArrayList<>();
 
 }
