@@ -1,6 +1,5 @@
 package com.kogut.danliexchange1c.webservices.document;
 
-import com.kogut.danliexchange1c.dto.document.purchaseinvoice.PurchaseInvoiceDTO;
 import com.kogut.danliexchange1c.dto.document.receiptcashorder.ReceiptCashOrderDTO;
 import com.kogut.danliexchange1c.services.exchange.interfaces.IExchange;
 import lombok.NoArgsConstructor;
