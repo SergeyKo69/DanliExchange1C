@@ -158,7 +158,7 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathReceiptCashOrder", pathKa2ReceiptCashOrder);
             settings.put("pathBankStatement", pathKa2BankStatement);
             settings.put("pathProduct", pathKa2Product);
-            settings.put("pathgtd", pathKa2Gtd);
+            settings.put("pathGtd", pathKa2Gtd);
             settings.put("pathTnvd", pathKa2Tnvd);
             settings.put("userName", userNameKa2);
             settings.put("password", passwordKa2);
@@ -179,7 +179,7 @@ public class SettingsUtil implements ISettingsUtil {
             settings.put("pathReceiptCashOrder", pathKa1ReceiptCashOrder);
             settings.put("pathBankStatement", pathKa1BankStatement);
             settings.put("pathProduct", pathKa1Product);
-            settings.put("pathgtd", pathKa1Gtd);
+            settings.put("pathGtd", pathKa1Gtd);
             settings.put("pathTnvd", pathKa1Tnvd);
             settings.put("userName", userNameKa1);
             settings.put("password", passwordKa1);

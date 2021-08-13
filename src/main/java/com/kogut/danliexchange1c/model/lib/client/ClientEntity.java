@@ -20,7 +20,7 @@ import java.util.List;
 public class ClientEntity extends AbstractCommonLibEntity {
 
     @Column(name = "inn", length = 12)
-    private String INN = "";
+    private String inn = "";
 
     @Column(name = "cod_po_okpo", length = 12)
     private String codPoOkpo = "";

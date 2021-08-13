@@ -4,7 +4,10 @@ import com.kogut.danliexchange1c.dto.document.invoicereceived.InvoiceReceivedDTO
 import com.kogut.danliexchange1c.dto.document.purchaseinvoice.PurchaseInvoiceDTO;
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.senders.interfaces.ISender;
+import com.kogut.danliexchange1c.senders.lib.GtdSender;
 import com.kogut.danliexchange1c.util.interfaces.ISettingsUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -25,6 +28,8 @@ public class InvoiceReceivedSender implements ISender<InvoiceReceivedDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
+    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+
     @Autowired
     public InvoiceReceivedSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {
         this.restTemplate = restTemplate;
@@ -44,6 +49,7 @@ public class InvoiceReceivedSender implements ISender<InvoiceReceivedDTO> {
                     String.class);
             return response.getStatusCode();
         } catch (IllegalArgumentException | RestClientException e) {
+            logger.error(e.getMessage());
             return HttpStatus.BAD_REQUEST;
         }
     }

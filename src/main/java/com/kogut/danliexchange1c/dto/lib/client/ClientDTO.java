@@ -15,7 +15,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = false)
 public class ClientDTO extends AbstractCommonLibDTO {
 
-    private String INN = "";
+    private String inn = "";
     private String codPoOkpo = "";
     private String comment = "";
     private String kpp = "";
