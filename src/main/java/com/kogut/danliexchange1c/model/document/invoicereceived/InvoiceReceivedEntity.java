@@ -5,11 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author S.Kogut on 11.08.2021
@@ -78,5 +78,9 @@ public class InvoiceReceivedEntity extends AbstractCommonDocEntity {
 
     @Column(name = "code_view_operation_decrease")
     private String codeViewOperationDecrease = "";
+
+    @ElementCollection
+    @CollectionTable(name = "invoice_received_payment_tab", joinColumns = @JoinColumn(name = "invoice_received_id"))
+    private List<InvoiceReceivedPrepaymentTabEntity> prepayment = new ArrayList<>();;
 
 }

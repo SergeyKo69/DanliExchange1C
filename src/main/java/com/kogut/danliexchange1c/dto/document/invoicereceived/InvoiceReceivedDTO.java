@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author S.Kogut on 11.08.2021
@@ -36,5 +38,7 @@ public class InvoiceReceivedDTO extends AbstractCommonDocDTO {
     private BigDecimal amountDoc = BigDecimal.ZERO;
     private String kppClient = "";
     private String codeViewOperationDecrease = "";
+
+    private List<InvoiceReceivedPrepaymentTabDTO> prepayment = new ArrayList<>();
 
 }
