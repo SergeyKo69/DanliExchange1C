@@ -28,7 +28,10 @@ public class GtdMapper extends AbstractMapper<GtdEntity, GtdDTO> {
     public void setupMapper() {
         mapper.createTypeMap(GtdDTO.class, GtdEntity.class)
                 .addMappings(m -> m.skip(GtdEntity:: setId))
-                .addMappings(m -> m.skip(GtdEntity::setClientDB));
+                .addMappings(m -> m.skip(GtdEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(GtdEntity.class, GtdDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

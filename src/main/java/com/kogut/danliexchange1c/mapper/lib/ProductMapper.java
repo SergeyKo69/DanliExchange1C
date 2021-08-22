@@ -29,7 +29,10 @@ public class ProductMapper extends AbstractMapper<ProductEntity, ProductDTO> {
     public void setupMapper() {
         mapper.createTypeMap(ProductDTO.class, ProductEntity.class)
                 .addMappings(m -> m.skip(ProductEntity:: setId))
-                .addMappings(m -> m.skip(ProductEntity::setClientDB));
+                .addMappings(m -> m.skip(ProductEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(ProductEntity.class, ProductDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

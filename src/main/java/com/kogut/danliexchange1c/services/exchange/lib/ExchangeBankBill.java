@@ -27,10 +27,15 @@ public class ExchangeBankBill implements IExchange<BankBillDTO> {
     @Override
     public void exchange(BankBillDTO bankBillDTO) {
         bankBillService.deleteByExternalId(bankBillDTO.getExternalId());
-        HttpStatus status = sender.send(bankBillDTO);
-        if (status != HttpStatus.CREATED) {
-            // Save database.
+        try {
+            HttpStatus status = sender.send(bankBillDTO);
+            if (status != HttpStatus.CREATED) {
+                // Save database.
+                bankBillService.saveDTO(bankBillDTO);
+            }
+        } catch (Exception e) {
             bankBillService.saveDTO(bankBillDTO);
         }
+
     }
 }

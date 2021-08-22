@@ -27,10 +27,15 @@ public class ExchangeAgreement implements IExchange<AgreementDTO> {
     @Override
     public void exchange(AgreementDTO agreementDTO) {
         agreementService.deleteByExternalId(agreementDTO.getExternalId());
-        HttpStatus status = sender.send(agreementDTO);
-        if (status != HttpStatus.CREATED) {
-            // Save database.
+        try {
+            HttpStatus status = sender.send(agreementDTO);
+            if (status != HttpStatus.CREATED) {
+                // Save database.
+                agreementService.saveDTO(agreementDTO);
+            }
+        } catch (Exception e) {
             agreementService.saveDTO(agreementDTO);
         }
+
     }
 }

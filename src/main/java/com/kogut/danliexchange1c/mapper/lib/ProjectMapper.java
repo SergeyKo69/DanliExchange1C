@@ -29,7 +29,10 @@ public class ProjectMapper extends AbstractMapper<ProjectEntity, ProjectDTO> {
     public void setupMapper() {
         mapper.createTypeMap(ProjectDTO.class, ProjectEntity.class)
                 .addMappings(m -> m.skip(ProjectEntity:: setId))
-                .addMappings(m -> m.skip(ProjectEntity::setClientDB));
+                .addMappings(m -> m.skip(ProjectEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(ProjectEntity.class, ProjectDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

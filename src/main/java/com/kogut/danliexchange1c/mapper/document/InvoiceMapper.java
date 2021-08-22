@@ -36,7 +36,10 @@ public class InvoiceMapper extends AbstractMapper<InvoiceEntity, InvoiceDTO> {
     public void setupMapper() {
         mapper.createTypeMap(InvoiceDTO.class, InvoiceEntity.class)
                 .addMappings(m -> m.skip(InvoiceEntity :: setId))
-                .addMappings(m -> m.skip(InvoiceEntity :: setClientDB));
+                .addMappings(m -> m.skip(InvoiceEntity :: setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(InvoiceEntity.class, InvoiceDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

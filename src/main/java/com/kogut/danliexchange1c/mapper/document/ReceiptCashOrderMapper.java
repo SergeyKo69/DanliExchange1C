@@ -37,7 +37,10 @@ public class ReceiptCashOrderMapper extends AbstractMapper<ReceiptCashOrderEntit
     public void setupMapper() {
         mapper.createTypeMap(ReceiptCashOrderDTO.class, ReceiptCashOrderEntity.class)
                 .addMappings(m -> m.skip(ReceiptCashOrderEntity :: setId))
-                .addMappings(m -> m.skip(ReceiptCashOrderEntity :: setClientDB));
+                .addMappings(m -> m.skip(ReceiptCashOrderEntity :: setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(ReceiptCashOrderEntity.class, ReceiptCashOrderDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

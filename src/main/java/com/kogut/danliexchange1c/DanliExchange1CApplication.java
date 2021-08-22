@@ -10,10 +10,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.client.RestTemplate;
 
 import static org.modelmapper.config.Configuration.AccessLevel.PRIVATE;
 
+@EnableScheduling
 @SpringBootApplication
 public class DanliExchange1CApplication {
 

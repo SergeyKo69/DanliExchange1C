@@ -29,7 +29,10 @@ public class TnvdMapper extends AbstractMapper<TnvdEntity, TnvdDTO> {
     public void setupMapper() {
         mapper.createTypeMap(TnvdDTO.class, TnvdEntity.class)
                 .addMappings(m -> m.skip(TnvdEntity:: setId))
-                .addMappings(m -> m.skip(TnvdEntity::setClientDB));
+                .addMappings(m -> m.skip(TnvdEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(TnvdEntity.class, TnvdDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

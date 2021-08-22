@@ -29,7 +29,10 @@ public class StoreMapper extends AbstractMapper<StoreEntity, StoreDTO> {
     public void setupMapper() {
         mapper.createTypeMap(StoreDTO.class, StoreEntity.class)
                 .addMappings(m -> m.skip(StoreEntity:: setId))
-                .addMappings(m -> m.skip(StoreEntity::setClientDB));
+                .addMappings(m -> m.skip(StoreEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(StoreEntity.class, StoreDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

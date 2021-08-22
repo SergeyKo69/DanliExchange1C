@@ -31,7 +31,10 @@ public class PriceMapper extends AbstractMapper<PriceEntity, PriceDTO> {
     public void setupMapper() {
         mapper.createTypeMap(PriceDTO.class, PriceEntity.class)
                 .addMappings(m -> m.skip(PriceEntity:: setId))
-                .addMappings(m -> m.skip(PriceEntity::setClientDB));
+                .addMappings(m -> m.skip(PriceEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(PriceEntity.class, PriceDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

@@ -32,7 +32,10 @@ public class GroupLibMapper extends AbstractMapper<GroupLibEntity, GroupLibDTO> 
     public void setupMapper() {
         mapper.createTypeMap(GroupLibDTO.class, GroupLibEntity.class)
                 .addMappings(m -> m.skip(GroupLibEntity:: setId))
-                .addMappings(m -> m.skip(GroupLibEntity::setClientDB));
+                .addMappings(m -> m.skip(GroupLibEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(GroupLibEntity.class, GroupLibDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

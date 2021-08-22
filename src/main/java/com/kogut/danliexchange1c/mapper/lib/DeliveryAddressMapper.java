@@ -27,7 +27,10 @@ public class DeliveryAddressMapper extends AbstractMapper<DeliveryAddressEntity,
     public void setupMapper() {
         mapper.createTypeMap(DeliveryAddressDTO.class, DeliveryAddressEntity.class)
                 .addMappings(m -> m.skip(DeliveryAddressEntity:: setId))
-                .addMappings(m -> m.skip(DeliveryAddressEntity::setClientDB));
+                .addMappings(m -> m.skip(DeliveryAddressEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(DeliveryAddressEntity.class, DeliveryAddressDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

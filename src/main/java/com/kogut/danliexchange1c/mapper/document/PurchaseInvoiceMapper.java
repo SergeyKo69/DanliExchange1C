@@ -42,7 +42,10 @@ public class PurchaseInvoiceMapper extends AbstractMapper<PurchaseInvoiceEntity,
     public void setupMapper() {
         mapper.createTypeMap(PurchaseInvoiceDTO.class, PurchaseInvoiceEntity.class)
                 .addMappings(m -> m.skip(PurchaseInvoiceEntity :: setId))
-                .addMappings(m -> m.skip(PurchaseInvoiceEntity :: setClientDB));
+                .addMappings(m -> m.skip(PurchaseInvoiceEntity :: setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(PurchaseInvoiceEntity.class, PurchaseInvoiceDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

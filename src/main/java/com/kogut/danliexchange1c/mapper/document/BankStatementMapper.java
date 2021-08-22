@@ -37,7 +37,10 @@ public class BankStatementMapper extends AbstractMapper<BankStatementEntity, Ban
     public void setupMapper() {
         mapper.createTypeMap(BankStatementDTO.class, BankStatementEntity.class)
                 .addMappings(m -> m.skip(BankStatementEntity :: setId))
-                .addMappings(m -> m.skip(BankStatementEntity :: setClientDB));
+                .addMappings(m -> m.skip(BankStatementEntity :: setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(BankStatementEntity.class, BankStatementDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

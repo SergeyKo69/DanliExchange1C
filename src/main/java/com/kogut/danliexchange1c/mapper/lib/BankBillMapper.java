@@ -30,7 +30,10 @@ public class BankBillMapper extends AbstractMapper<BankBillEntity, BankBillDTO> 
     public void setupMapper() {
         mapper.createTypeMap(BankBillDTO.class, BankBillEntity.class)
                 .addMappings(m -> m.skip(BankBillEntity:: setId))
-                .addMappings(m -> m.skip(BankBillEntity::setClientDB));
+                .addMappings(m -> m.skip(BankBillEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(BankBillEntity.class, BankBillDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

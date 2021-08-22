@@ -34,7 +34,10 @@ public class ClientMapper extends AbstractMapper<ClientEntity, ClientDTO> {
     public void setupMapper() {
         mapper.createTypeMap(ClientDTO.class, ClientEntity.class)
                 .addMappings(m -> m.skip(ClientEntity:: setId))
-                .addMappings(m -> m.skip(ClientEntity::setClientDB));
+                .addMappings(m -> m.skip(ClientEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(ClientEntity.class, ClientDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override

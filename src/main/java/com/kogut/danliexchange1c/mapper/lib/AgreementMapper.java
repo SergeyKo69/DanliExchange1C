@@ -30,7 +30,10 @@ public class AgreementMapper extends AbstractMapper<AgreementEntity, AgreementDT
     public void setupMapper() {
         mapper.createTypeMap(AgreementDTO.class, AgreementEntity.class)
                 .addMappings(m -> m.skip(AgreementEntity:: setId))
-                .addMappings(m -> m.skip(AgreementEntity::setClientDB));
+                .addMappings(m -> m.skip(AgreementEntity::setClientDB))
+                .setPostConverter(toEntityConverter());
+        mapper.createTypeMap(AgreementEntity.class, AgreementDTO.class)
+                .setPostConverter(toDtoConverter());
     }
 
     @Override
