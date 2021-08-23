@@ -6,6 +6,7 @@ import com.kogut.danliexchange1c.model.common.AbstractEntity;
 import com.kogut.danliexchange1c.services.db.lib.interfaces.IBaseLibService;
 import com.kogut.danliexchange1c.services.exchange.interfaces.IExchange;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -21,6 +22,9 @@ public abstract class AbstractLibScheduler<D extends AbstractDTO, E extends Abst
     private IBaseLibService<E, D> dbService;
     private AbstractMapper<E, D> mapper;
 
+    @Value("${scheduler.enabled}")
+    private Boolean schedulerEnabled;
+
     public AbstractLibScheduler(IExchange<D> exchangeService,
                                 IBaseLibService<E, D> dbService,
                                 AbstractMapper<E, D> mapper) {
@@ -31,10 +35,12 @@ public abstract class AbstractLibScheduler<D extends AbstractDTO, E extends Abst
 
     @Scheduled(fixedRateString = "${scheduler.frequency}")
     public void startExchange() {
-        List<E> entityList = dbService.findAll();
-        entityList.forEach(row -> {
-            exchangeService.exchange(mapper.toDto(row));
-        });
-        System.out.println("exchange service: " + exchangeService);
+        if (schedulerEnabled) {
+            List<E> entityList = dbService.findAll();
+            entityList.forEach(row -> {
+                exchangeService.exchange(mapper.toDto(row));
+            });
+            System.out.println("exchange service: " + exchangeService);
+        }
     }
 }
