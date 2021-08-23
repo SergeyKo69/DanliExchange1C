@@ -4,6 +4,8 @@ import com.kogut.danliexchange1c.dto.lib.agreement.AgreementDTO;
 import com.kogut.danliexchange1c.senders.interfaces.ISender;
 import com.kogut.danliexchange1c.services.db.lib.interfaces.IAgreementService;
 import com.kogut.danliexchange1c.services.exchange.interfaces.IExchange;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -17,6 +19,7 @@ public class ExchangeAgreement implements IExchange<AgreementDTO> {
 
     private final ISender<AgreementDTO> sender;
     private final IAgreementService agreementService;
+    Logger logger = LoggerFactory.getLogger(ExchangeAgreement.class);
 
     @Autowired
     public ExchangeAgreement(ISender<AgreementDTO> sender, IAgreementService agreementService) {
@@ -34,6 +37,7 @@ public class ExchangeAgreement implements IExchange<AgreementDTO> {
                 agreementService.saveDTO(agreementDTO);
             }
         } catch (Exception e) {
+            logger.error(e.getMessage(), e);
             agreementService.saveDTO(agreementDTO);
         }
 

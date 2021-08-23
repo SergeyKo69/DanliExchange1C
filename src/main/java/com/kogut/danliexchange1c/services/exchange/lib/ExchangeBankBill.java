@@ -4,6 +4,8 @@ import com.kogut.danliexchange1c.dto.lib.bankbill.BankBillDTO;
 import com.kogut.danliexchange1c.senders.interfaces.ISender;
 import com.kogut.danliexchange1c.services.db.lib.interfaces.IBankBillService;
 import com.kogut.danliexchange1c.services.exchange.interfaces.IExchange;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -17,6 +19,7 @@ public class ExchangeBankBill implements IExchange<BankBillDTO> {
 
     private final ISender<BankBillDTO> sender;
     private final IBankBillService bankBillService;
+    Logger logger = LoggerFactory.getLogger(ExchangeBankBill.class);
 
     @Autowired
     public ExchangeBankBill(ISender<BankBillDTO> sender, IBankBillService bankBillService) {
@@ -34,6 +37,7 @@ public class ExchangeBankBill implements IExchange<BankBillDTO> {
                 bankBillService.saveDTO(bankBillDTO);
             }
         } catch (Exception e) {
+            logger.error(e.getMessage(), e);
             bankBillService.saveDTO(bankBillDTO);
         }
 
