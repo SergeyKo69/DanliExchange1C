@@ -5,5 +5,8 @@ package com.kogut.danliexchange1c.enumerations.lib;
  */
 public enum TypeAgreementEnum {
     SELLER,
-    BUYER
+    BUYER,
+    CONSIGNOR,
+    AGENT,
+    OTHER
 }
