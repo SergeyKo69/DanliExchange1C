@@ -26,7 +26,7 @@ public class PriceSender implements ISender<PriceDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(PriceSender.class);
 
     @Autowired
     public PriceSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

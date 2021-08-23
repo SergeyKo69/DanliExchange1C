@@ -26,7 +26,7 @@ public class TnvdSender implements ISender<TnvdDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(TnvdSender.class);
 
     @Autowired
     public TnvdSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

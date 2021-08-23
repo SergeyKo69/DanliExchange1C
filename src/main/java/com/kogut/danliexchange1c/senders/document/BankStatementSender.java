@@ -28,7 +28,7 @@ public class BankStatementSender implements ISender<BankStatementDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(BankStatementSender.class);
 
     @Autowired
     public BankStatementSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

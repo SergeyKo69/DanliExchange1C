@@ -27,7 +27,7 @@ public class ReceiptCashOrderSender implements ISender<ReceiptCashOrderDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(ReceiptCashOrderSender.class);
 
     @Autowired
     public ReceiptCashOrderSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

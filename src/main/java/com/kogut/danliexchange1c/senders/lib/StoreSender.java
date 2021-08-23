@@ -26,7 +26,7 @@ public class StoreSender implements ISender<StoreDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(StoreSender.class);
 
     @Autowired
     public StoreSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

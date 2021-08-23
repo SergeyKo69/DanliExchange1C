@@ -26,7 +26,7 @@ public class DeliveryAddressSender implements ISender<DeliveryAddressDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(DeliveryAddressSender.class);
 
     @Autowired
     public DeliveryAddressSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

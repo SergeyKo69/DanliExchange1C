@@ -26,7 +26,7 @@ public class ProjectSender implements ISender<ProjectDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(ProjectSender.class);
 
     @Autowired
     public ProjectSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

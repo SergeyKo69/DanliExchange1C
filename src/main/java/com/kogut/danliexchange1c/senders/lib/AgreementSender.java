@@ -26,7 +26,7 @@ public class AgreementSender implements ISender<AgreementDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(AgreementSender.class);
 
     @Autowired
     public AgreementSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

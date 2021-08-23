@@ -27,7 +27,7 @@ public class GroupLibSender implements ISender<GroupLibDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(GroupLibSender.class);
 
     @Autowired
     public GroupLibSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

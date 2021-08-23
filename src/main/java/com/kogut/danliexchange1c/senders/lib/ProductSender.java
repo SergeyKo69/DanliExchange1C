@@ -26,7 +26,7 @@ public class ProductSender implements ISender<ProductDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(ProductSender.class);
 
     @Autowired
     public ProductSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {

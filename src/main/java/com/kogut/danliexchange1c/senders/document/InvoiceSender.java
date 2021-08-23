@@ -27,7 +27,7 @@ public class InvoiceSender implements ISender<InvoiceDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(InvoiceSender.class);
 
     @Autowired
     public InvoiceSender(RestTemplate restTemplate,

@@ -26,7 +26,7 @@ public class ClientSender  implements ISender<ClientDTO> {
     private final RestTemplate restTemplate;
     private final ISettingsUtil settingsUtil;
 
-    Logger logger = LoggerFactory.getLogger(GtdSender.class);
+    Logger logger = LoggerFactory.getLogger(ClientSender.class);
 
     @Autowired
     public ClientSender(RestTemplate restTemplate, ISettingsUtil settingsUtil) {
