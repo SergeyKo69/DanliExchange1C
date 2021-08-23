@@ -36,7 +36,6 @@ public abstract class AbstractLibScheduler<D extends AbstractDTO, E extends Abst
         if (schedulerEnabled) {
             List<E> entityList = dbService.findAll();
             entityList.forEach(row -> exchangeService.exchange(mapper.toDto(row)));
-            System.out.println("exchange service: " + exchangeService);
         }
     }
 }
