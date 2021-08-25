@@ -41,4 +41,16 @@ public class PurchaseInvoiceServicesTabEntity extends AbstractEntity {
     @Column(name = "article_id", length = 36)
     private String articleId = "";
 
+    @Column(name = "code_expense_account")
+    private String codeExpenseAccount = "";
+
+    @Column(name = "subconto1_id")
+    private String subconto1id = "";
+
+    @Column(name = "subconto2_id")
+    private String subconto2id = "";
+
+    @Column(name = "subconto3_id")
+    private String subconto3id = "";
+
 }

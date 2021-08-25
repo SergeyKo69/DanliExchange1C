@@ -24,5 +24,9 @@ public class PurchaseinvoiceServicesTabDTO extends AbstractDTO {
     private BigDecimal amountVat = BigDecimal.ZERO;
     private BigDecimal price = BigDecimal.ZERO;
     private String articleId = "";
+    private String codeExpenseAccount = "";
+    private String subconto1id = "";
+    private String subconto2id = "";
+    private String subconto3id = "";
 
 }
