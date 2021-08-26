@@ -30,6 +30,9 @@ public class PurchaseInvoiceDTO extends AbstractCommonDocDTO {
     private Boolean includeVAT;
     private String projectId = "";
     private String storeId = "";
+    private String customerAccountCode = "";
+    private String customerAccountPrepaymentCode = "";
+
 
     private List<PurchaseInvoiceProductTabDTO> products = new ArrayList<>();
     private List<PurchaseinvoiceServicesTabDTO> services = new ArrayList<>();

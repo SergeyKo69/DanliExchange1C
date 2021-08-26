@@ -54,6 +54,12 @@ public class PurchaseInvoiceEntity extends AbstractCommonDocEntity {
     @Column(name = "store_id")
     private String storeId = "";
 
+    @Column(name = "customer_account_code")
+    private String customerAccountCode = "";
+
+    @Column(name = "customer_account_prepayment_code")
+    private String customerAccountPrepaymentCode = "";
+
     @ElementCollection
     @CollectionTable(name = "purchase_invoice_products_tab", joinColumns = @JoinColumn(name = "purchase_invoice_id"))
     List<PurchaseInvoiceProductsTabEntity> products;
