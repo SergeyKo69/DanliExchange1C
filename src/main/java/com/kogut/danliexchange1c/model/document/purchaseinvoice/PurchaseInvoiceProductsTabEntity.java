@@ -23,6 +23,9 @@ public class PurchaseInvoiceProductsTabEntity extends AbstractEntity {
     @Column(name = "unit_id", length = 36)
     private String unitId = "";
 
+    @Column(name = "unit_coefficient")
+    private Integer unitCoefficient = 1;
+
     @Column(name = "quantity_seats")
     private BigDecimal quantitySeats = BigDecimal.ZERO;
 

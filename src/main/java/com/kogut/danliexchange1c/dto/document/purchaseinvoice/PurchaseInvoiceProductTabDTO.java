@@ -18,6 +18,7 @@ public class PurchaseInvoiceProductTabDTO extends AbstractDTO {
 
     private String productId = "";
     private String unitId = "";
+    private Integer unitCoefficient = 1;
     private BigDecimal quantitySeats = BigDecimal.ZERO;
     private BigDecimal quantity = BigDecimal.ZERO;
     private String unitSeatsId = "";

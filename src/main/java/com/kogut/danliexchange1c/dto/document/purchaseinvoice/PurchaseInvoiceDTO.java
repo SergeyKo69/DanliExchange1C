@@ -20,6 +20,7 @@ import java.util.List;
 public class PurchaseInvoiceDTO extends AbstractCommonDocDTO {
 
     private String currencyId = "";
+    private BigDecimal rate = new BigDecimal("1");
     private LocalDate dateIn;
     private String numberIn;
     private String agreementId = "";
@@ -28,6 +29,7 @@ public class PurchaseInvoiceDTO extends AbstractCommonDocDTO {
     private BigDecimal amount = BigDecimal.ZERO;
     private String priceId = "";
     private Boolean includeVAT;
+    private Boolean amountIncludeVAT;
     private String projectId = "";
     private String storeId = "";
     private String customerAccountCode = "";

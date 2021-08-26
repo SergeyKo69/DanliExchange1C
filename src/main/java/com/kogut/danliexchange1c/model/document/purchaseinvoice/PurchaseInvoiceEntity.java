@@ -21,6 +21,9 @@ import java.util.List;
 @Table(name = "purchase_invoice")
 public class PurchaseInvoiceEntity extends AbstractCommonDocEntity {
 
+    @Column(name = "rate")
+    private BigDecimal rate = new BigDecimal("1");
+
     @Column(name = "currency_id")
     private String currencyId = "";
 
@@ -47,6 +50,9 @@ public class PurchaseInvoiceEntity extends AbstractCommonDocEntity {
 
     @Column(name = "include_vat")
     private Boolean includeVAT;
+
+    @Column(name = "amount_include_var")
+    private Boolean amountIncludeVAT;
 
     @Column(name = "project_id")
     private String projectId = "";
