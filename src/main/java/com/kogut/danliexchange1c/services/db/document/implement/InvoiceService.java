@@ -54,6 +54,14 @@ public class InvoiceService implements IInvoiceService {
     }
 
     @Override
+    @Transactional
+    public List<InvoiceDTO> findAllDTO() {
+        return invoiceRepository.findAll()
+                .stream().map(invoiceMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<InvoiceEntity> findAllByExternalId(@NotNull String externalId) {
         return invoiceRepository.findAllByExternalId(externalId);
     }

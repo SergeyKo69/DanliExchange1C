@@ -33,8 +33,8 @@ public abstract class AbstractDocScheduler<D extends AbstractDTO, E extends Abst
     @Scheduled(fixedRateString = "${scheduler.frequency}")
     public void startExchange() {
         if (schedulerEnabled) {
-            List<E> entityList = dbService.findAll();
-            entityList.forEach(row -> exchangeService.exchange(mapper.toDto(row)));
+            List<D> entityList = dbService.findAllDTO();
+            entityList.forEach(exchangeService::exchange);
         }
     }
 }

@@ -53,6 +53,14 @@ public class InvoiceIssuedService implements IInvoiceIssuedService {
     }
 
     @Override
+    @Transactional
+    public List<InvoiceIssuedDTO> findAllDTO() {
+        return invoiceIssuedRepository.findAll()
+                .stream().map(invoiceIssuedMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<InvoiceIssuedEntity> findAllByExternalId(String externalId) {
         return invoiceIssuedRepository.findAllByExternalId(externalId);
     }

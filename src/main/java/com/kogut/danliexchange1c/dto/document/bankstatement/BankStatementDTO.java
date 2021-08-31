@@ -36,7 +36,7 @@ public class BankStatementDTO extends AbstractCommonDocDTO {
     private String numberCheck = "";
     private String articleId = "";
     private String currencyId = "";
-    private BankStatementBaseDocDTO baseDoc;
+    private BankStatementBaseDocDTO baseDoc = new BankStatementBaseDocDTO();
 
     private List<BankStatementDecriptionTabDTO> cashDecription = new ArrayList<>();
 

@@ -15,6 +15,8 @@ public interface IBaseDocService<E,D> {
 
     List<E> findAll();
 
+    List<D> findAllDTO();
+
     List<E> findAllByExternalId(String externalId);
     List<E> findAllByClientDBOrderByDateTime(ClientDBEnum clientDB);
     List<D> findAllByClientDBOrderByDateTimeDTO(ClientDBEnum clientDB);

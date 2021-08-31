@@ -54,6 +54,14 @@ public class BankStatementService implements IBankStatementService {
     }
 
     @Override
+    @Transactional
+    public List<BankStatementDTO> findAllDTO() {
+        return bankStatementRepository.findAll()
+                .stream().map(bankStatementMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<BankStatementEntity> findAllByExternalId(String externalId) {
         return bankStatementRepository.findAllByExternalId(externalId);
     }

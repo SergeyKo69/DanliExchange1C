@@ -49,8 +49,17 @@ public class PurchaseInvoiceService implements IPurchaseInvoiceService {
     }
 
     @Override
+    @Transactional
     public List<PurchaseInvoiceEntity> findAll() {
         return purchaseInvoiceRepository.findAll();
+    }
+
+    @Override
+    @Transactional
+    public List<PurchaseInvoiceDTO> findAllDTO() {
+        return purchaseInvoiceRepository.findAll()
+                .stream().map(purchaseInvoiceMapper::toDto)
+                .collect(Collectors.toList());
     }
 
     @Override

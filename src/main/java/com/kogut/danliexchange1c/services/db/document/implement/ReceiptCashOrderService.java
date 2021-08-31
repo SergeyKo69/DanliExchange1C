@@ -54,6 +54,14 @@ public class ReceiptCashOrderService implements IReceiptCashOrderService {
     }
 
     @Override
+    @Transactional
+    public List<ReceiptCashOrderDTO> findAllDTO() {
+        return receiptCashOrderRepository.findAll()
+                .stream().map(receiptCashOrderMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<ReceiptCashOrderEntity> findAllByExternalId(String externalId) {
         return receiptCashOrderRepository.findAllByExternalId(externalId);
     }
