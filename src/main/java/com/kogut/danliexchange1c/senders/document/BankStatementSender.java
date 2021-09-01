@@ -17,6 +17,8 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * @author S.Kogut on 12.08.2021
@@ -47,6 +49,10 @@ public class BankStatementSender implements ISender<BankStatementDTO> {
                     url.toString(),
                     request,
                     String.class);
+            String body = response.getBody();
+            if (Objects.nonNull(body) && !body.isEmpty()) {
+                logger.info(body);
+            }
             return response.getStatusCode();
         } catch (IllegalArgumentException | RestClientException e) {
             logger.error(e.getMessage());
