@@ -54,4 +54,19 @@ public class BankStatementDecriptionTabEntity {
     @Column(name = "doc_r")
     private BankStatementBaseDocEntity docR;
 
+    @Column(name = "customer_account_code")
+    private String customerAccountCode = "";
+
+    @Column(name = "customer_account_prepayment_code")
+    private String customerAccountPrepaymentCode = "";
+
+    @Column(name = "subconto_id_kt_1")
+    private String subcontoIdKt1 = "";
+
+    @Column(name = "subconto_id_kt_2")
+    private String subcontoIdKt2 = "";
+
+    @Column(name = "subconto_id_kt_3")
+    private String subcontoIdKt3 = "";
+
 }

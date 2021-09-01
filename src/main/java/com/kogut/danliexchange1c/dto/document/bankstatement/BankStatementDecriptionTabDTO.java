@@ -28,5 +28,9 @@ public class BankStatementDecriptionTabDTO extends AbstractDTO {
     private String docRView = "";
     private String docRId = "";
     private BankStatementBaseDocDTO docR = new BankStatementBaseDocDTO();
-
+    private String customerAccountCode = "";
+    private String customerAccountPrepaymentCode = "";
+    private String subcontoIdKt1 = "";
+    private String subcontoIdKt2 = "";
+    private String subcontoIdKt3 = "";
 }
