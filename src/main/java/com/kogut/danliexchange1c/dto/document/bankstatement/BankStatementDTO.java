@@ -37,6 +37,11 @@ public class BankStatementDTO extends AbstractCommonDocDTO {
     private String articleId = "";
     private String currencyId = "";
     private BankStatementBaseDocDTO baseDoc = new BankStatementBaseDocDTO();
+    private String customerAccountCode = "";
+    private String customerAccountPrepaymentCode = "";
+    private String subcontoIdKt1 = "";
+    private String subcontoIdKt2 = "";
+    private String subcontoIdKt3 = "";
 
     private List<BankStatementDecriptionTabDTO> cashDecription = new ArrayList<>();
 
