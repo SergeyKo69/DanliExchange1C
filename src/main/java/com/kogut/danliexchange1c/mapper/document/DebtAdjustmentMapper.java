@@ -1,12 +1,10 @@
 package com.kogut.danliexchange1c.mapper.document;
 
-import com.kogut.danliexchange1c.dto.document.bankstatement.BankStatementDTO;
 import com.kogut.danliexchange1c.dto.document.debtadjustment.DebtAdjustmentCreditDebtTabDTO;
 import com.kogut.danliexchange1c.dto.document.debtadjustment.DebtAdjustmentDTO;
 import com.kogut.danliexchange1c.dto.document.debtadjustment.DebtAdjustmentDebetDebtTabDTO;
 import com.kogut.danliexchange1c.enumerations.general.ClientDBEnum;
 import com.kogut.danliexchange1c.mapper.abstracted.AbstractMapper;
-import com.kogut.danliexchange1c.model.document.bankstatement.BankStatementEntity;
 import com.kogut.danliexchange1c.model.document.debtadjustment.DebtAdjustmentEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
