@@ -76,4 +76,8 @@ public class DebtAdjustmentEntity extends AbstractCommonDocEntity {
     @CollectionTable(name = "debt_adjustment_debet_debt_tab", joinColumns = @JoinColumn(name = "debt_adjustment_id"))
     List<DebtAdjustmentDebetDebtTabEntity> debetDebt = new ArrayList<>();
 
+    @ElementCollection
+    @CollectionTable(name = "debt_adjustment_credit_debt_tab", joinColumns = @JoinColumn(name = "debt_adjustment_id"))
+    List<DebtAdjustmentCreditDebtTabEntity> creditDebt = new ArrayList<>();
+
 }
