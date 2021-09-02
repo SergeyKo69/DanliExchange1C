@@ -37,5 +37,6 @@ public class DebtAdjustmentDTO extends AbstractCommonDocDTO {
     private BigDecimal amountDtDebt = BigDecimal.ZERO;
 
     List<DebtAdjustmentDebetDebtTabDTO> debetDebt = new ArrayList<>();
+    List<DebtAdjustmentCreditDebtTabDTO> creditDebt = new ArrayList<>();
 
 }
