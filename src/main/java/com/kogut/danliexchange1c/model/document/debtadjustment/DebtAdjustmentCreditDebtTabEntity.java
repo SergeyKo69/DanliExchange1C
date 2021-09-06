@@ -28,6 +28,9 @@ public class DebtAdjustmentCreditDebtTabEntity {
     @Column(name = "doc_id", length = 36)
     private String docId = "";
 
+    @Column(name = "doc_view")
+    private String docView = "";
+
     @Column(name = "amount")
     private BigDecimal amount = BigDecimal.ZERO;
 

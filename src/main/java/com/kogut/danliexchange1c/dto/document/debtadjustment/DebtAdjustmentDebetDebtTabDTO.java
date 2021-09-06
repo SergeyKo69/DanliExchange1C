@@ -20,6 +20,7 @@ public class DebtAdjustmentDebetDebtTabDTO extends AbstractDTO {
     private BigDecimal course = BigDecimal.ONE;
     private Integer multiplicity = 1;
     private String docId = "";
+    private String docView = "";
     private BigDecimal amount = BigDecimal.ZERO;
     private BigDecimal amountNU = BigDecimal.ZERO;
     private BigDecimal amountVR = BigDecimal.ZERO;
