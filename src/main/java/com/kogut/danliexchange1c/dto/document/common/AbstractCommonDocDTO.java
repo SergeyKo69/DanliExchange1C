@@ -25,8 +25,4 @@ public abstract class AbstractCommonDocDTO extends AbstractDTO {
     private Boolean deleted;
     private String comment = "";
 
-    @NotNull
-    @NotEmpty
-    private String clientDB;
-
 }

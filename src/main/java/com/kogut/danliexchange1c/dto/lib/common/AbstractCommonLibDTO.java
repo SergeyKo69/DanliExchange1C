@@ -22,8 +22,4 @@ public abstract class AbstractCommonLibDTO extends AbstractDTO {
     private String ownerId = "";
     private Boolean deleted;
 
-    @NotNull
-    @NotEmpty
-    private String clientDB;
-
 }
